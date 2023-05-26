@@ -41,7 +41,7 @@
 
 #define USE_MAX7456
 #define MAX7456_SPI_CS_PIN                  PH2
-#define MAX7456_SPI_INSTANCE                SPI3
+#define MAX7456_SPI_INSTANCE                SPI2
 
 #define BEEPER_PIN                          PB10
 #define MOTOR1_PIN                          PC9
@@ -101,9 +101,10 @@
 
 #define GYRO_1_EXTI_PIN                     PB12
 #define GYRO_1_CS_PIN                       PC14
-#define GYRO_1_SPI_INSTANCE                 SPI2
+#define GYRO_1_SPI_INSTANCE                 SPI1
+#define GYRO_1_ALIGN                        CW270_DEG
 
-#define TIMER_PIN_MAPPING                   TIMER_PIN_MAP( 0, LED_STRIP_PIN, 1, -1 ) \
+#define TIMER_PIN_MAPPING                   TIMER_PIN_MAP( 0, LED_STRIP_PIN, 1, 11 ) \
                                             TIMER_PIN_MAP( 1, MOTOR4_PIN, 1,  2 ) \
                                             TIMER_PIN_MAP( 2, MOTOR3_PIN, 1,  4 ) \
                                             TIMER_PIN_MAP( 3, MOTOR2_PIN, 2,  1 ) \
@@ -116,7 +117,6 @@
 
 
 #define ADC1_DMA_OPT                        0
-#define SPI3_TX_DMA_OPT                     5
 
 #define ADC_INSTANCE                        ADC1
 #define BARO_I2C_INSTANCE                   (I2CDEV_1)
@@ -125,3 +125,4 @@
 
 #define DEFAULT_CURRENT_METER_SOURCE        CURRENT_METER_ADC
 #define DEFAULT_VOLTAGE_METER_SOURCE        VOLTAGE_METER_ADC
+#define USE_LED_STRIP_64
